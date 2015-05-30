@@ -1,0 +1,110 @@
+\usefonttheme[onlylarge]{structurebold}
+\usefonttheme{professionalfonts}
+%\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\mode<presentation>
+
+%\usetheme{Rochester}
+\pgfdeclareimage[width=0.99\paperwidth]{SaMFoot}{SaMFooter}
+\pgfdeclareimage[width=0.98\paperwidth]{SaMHead}{SaMHeader}
+\titlegraphic{\includegraphics[width=.5\textwidth]{SaMLogo}}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+
+\setbeamertemplate{headline}{\topsep=0mm \begin{center} \pgfuseimage{SaMHead} \end{center}}
+
+\definecolor{samcolor}{rgb}{0.0,0.29,0.48}
+\setbeamercolor{foot}{fg=samcolor}
+
+\setbeamercolor{structure}{fg=samcolor} 
+
+%первый слайд
+\makeatletter
+\setbeamertemplate{title page}
+{	
+  %\vbox{}
+  %\vfill
+  \vskip-25pt%
+  \begin{centering}
+    \begin{beamercolorbox}[sep=8pt,right]{}  
+      {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+    \usebeamerfont{title}\inserttitle\par%
+      \vskip0.25em%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%     
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \vskip35pt%
+    \begin{beamercolorbox}[sep=8pt,right]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    %\begin{beamercolorbox}[sep=8pt,center]{institute}
+    %  \usebeamerfont{institute}\insertinstitute
+    %\end{beamercolorbox}
+    %\begin{beamercolorbox}[sep=8pt,center]{date}
+    %  \ifx\insertdate\@empty%
+    %  \else%
+    %    \usebeamerfont{date}\insertdate
+    %  \fi%     
+    %\end{beamercolorbox}\vskip0.5em
+  \end{centering}
+  \vfill
+}
+\makeatother
+
+%низ
+\setbeamertemplate{footline}{
+%\begin{tiny}
+ 
+\leavevmode%
+\vbox{
+	\hbox{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{}%
+			\insertframenumber{} / \inserttotalframenumber \hspace*{2ex}
+		\end{beamercolorbox}
+	}%
+	\hbox{\pgfuseimage{SaMFoot}}
+	\vskip-7pt%
+	\hbox{
+		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,left]{foot}%
+			\fontsize{3}{3}\selectfont Copyright \copyright \the\year . SaM Solutions
+		\end{beamercolorbox} }
+  	}
+  	\vskip0pt%
+%\end{tiny}
+%\vskip10pt
+}
+
+
+%финальный слайд
+\newcommand{\finalslide}[1]{
+\vbox{}
+  \vfill
+  \begin{beamercolorbox}[sep=8pt,center]{title}  
+      \huge\bf#1\par%
+      \vskip0.25em%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[sep=8pt,center]{foot1}% 
+      www.sam-solutions.com\par%
+      \vskip0.25em%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[sep=8pt,center]{foot1}% 
+    \inserttitlegraphic\par
+    \vskip0.25em%
+    \end{beamercolorbox}%
+  \begin{center}
+      \vskip-10pt%
+  \begin{beamercolorbox}[sep=8pt,center]{foot}% 
+\bf Value of Talent. Delivered. %\par%
+    \end{beamercolorbox}%
+  \end{center}
+}
