@@ -1,6 +1,13 @@
 \documentclass[ignorenonframetext,hyperref={pdftex,unicode}]{beamer}
 %\documentclass[aspectratio=169,ignorenonframetext,hyperref={pdftex,unicode}]{beamer}  %соотношение 16:9
 
+\newcommand{\shellcmd}[1]{
+\indent\indent\indent\texttt{\footnotesize\# #1}
+}
+\newcommand{\cfgline}[1]{
+\indent\indent\indent\texttt{\footnotesize #1}
+}
+
 \usepackage{amssymb,amsmath,mathtext} %поддержка формул и русского текста в них
 \usepackage{indentfirst,amsfonts} %поддержка русского стиля оформления текста и формул
 %\usepackage{makecell,multirow,longtable} %поддержка таблиц занимающих несколько страниц
@@ -70,7 +77,7 @@
 \begin{frame}{Інсталяцыя KDE: першая спроба} %новый слайд и его название
 	Паколькі дакументацыя FreeBSD настойліва раіць выкарыстоўваць \texttt{pkg} для інсталяцыі, пачнем:
 
-	\texttt{\# pkg install kde}
+	\shellcmd{pkg install kde}
 	\begin{center}
  		\includegraphics[height=0.7\textheight,keepaspectratio]{2656648042_0ced853512_z} %так вставляется картинка
 	\end{center}
@@ -88,9 +95,9 @@
 
 	Выпраўляем памылку:
 
-	\texttt{\# setenv http\_proxy <адрас:порт>} \pause
+	\shellcmd{setenv http\_proxy <адрас:порт>} \pause
 
-	\texttt{\# pkg install kde}
+	\shellcmd{pkg install kde}
 
 	\begin{center}
  		\includegraphics[height=0.6\textheight,keepaspectratio]{F-15_takeoff} %так вставляется картинка
@@ -115,7 +122,7 @@
 \begin{frame}{Інсталяцыя X} %новый слайд и его название
 	Што мы можам зрабіць, апроч як:
 
-	\texttt{\# pkg install xorg} \pause
+	\shellcmd{pkg install xorg} \pause
 	\\~\\	
 	І пасля інсталяцыі мы ўжо нават можам запусціць іксы. Але там пакуль проста голы стол і некалькі тэрміналаў.
 	\begin{center}
@@ -126,13 +133,13 @@
 \begin{frame}{Настройка загрузкі KDM} %новый слайд и его название
 	Я б прапанаваў паставіць які больш мацёры рэдактар, чым чысты vi, але гэта, безумоўна, неабавязкова
 
-	\texttt{\# pkg install nano vim} \pause
+	\shellcmd{pkg install nano vim} \pause
 	\\~\\	
-	І пасля інсталяцыі (ці замест яе) дадаем у скрыпт \texttt{/etc/rc.conf} наступныя радкі:
+	І пасля інсталяцыі (ці замест яе) дадаем у скрыпт \shellcmd{/etc/rc.conf} наступныя радкі:
 
-	\texttt{dbus\_enable="YES"}
+	\cfgline{dbus\_enable="YES"}
 	
-	\texttt{kdm4\_enable="YES"}
+	\cfgline{kdm4\_enable="YES"}
 \end{frame} %конец слайда
 
 \begin{frame}
