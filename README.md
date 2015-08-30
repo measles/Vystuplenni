@@ -2,6 +2,11 @@
 
 Рэпазіторый змяшчае зыходнікі для слайдаў з прэзентацыямі да розных дакладаў і выступленняў.
 
+## Абмеркаванне вынікаў выкарыстання Hackpad на лінуксоўцы ##
+Абмеркаванне вынікаў выкарыстання Hackpad у якасці сродка для каравання праектам лінуксоўка. Спрова падвесці вынікі і распрацаваць планы для далейшай працы.
+ * Зыходнікі: [2015.08.29_hack_the_hackpad](https://github.com/measles/Vystuplenni/tree/master/2015.08.29_hack_the_hackpad)
+ * Слайды на [Slideshare](http://www.slideshare.net/andrej_z/hack-the-hackpad)
+
 ## Як мы ставілі KDE пад FreeBSD ##
 Невялікі даклад пра досвед разгортвання дэсктопа з KDE пад FreeBSD на ліпеньскай лінуксоўцы MLUG 2015.
  * Заходнікі: [2015.07.25_KDE_on_FreeBSD/](https://github.com/measles/Vystuplenni/tree/master/2015.07.25_KDE_on_FreeBSD/)
