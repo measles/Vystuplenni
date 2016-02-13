@@ -108,6 +108,71 @@
 	\end{center}
 \end{frame}
 
+\section{Што атрымалася}
+\subsection{Файлы}
+\begin{frame}{Файлы}
+	Самае простае: ёсць вебінтэрфейс, ёсць дэсктопныя кліенты пад розныя сістэмы [7], ёсць пад Андроід [8]. 
+
+	Прабачце, браты-BSDшнікі, але для вас пакуль няма. Але ёсць спецыфікацыі і зыходнікі. Нехта хоча пашырыць спіс?
+	
+	\begin{center}
+ 		\includegraphics[height=0.4\textheight,keepaspectratio]{d_client}
+	\end{center}
+\end{frame}
+
+\subsection{Календар і кантакты}
+\begin{frame}{Календар і кантакты: сінхранізацыя на Андроід}
+	З дапамогай DAVdroid – CalDAV/CardDAV Sync [11] вы лёгка настрайваеце двухбаковую сінхранізацыю кантактаў і календара паміж прыладай і воблакама. Ужо можна карыстацца, але без экспарта гэта нічога не дае апроч ганарлівага ўсведамлення магчымасцяў.
+\end{frame}
+
+\begin{frame}{Календар і кантакты: перанос кантактаў}
+	Для пераноса кантактаў я экспорціў іх ў фармат vCard. Гэта дазваляе захаваць усякую там кірыліцу, але пахерыла ўсе фотаздымкі.
+
+	{\bfЗАЎВАГА!} Не выкарыстоўвайце у назвах груп нічога апроч літар. У маім выпадку сінхранізацыя групы "Сям'я" давала непрадказальныя вынікі.
+\end{frame}
+
+\begin{frame}{Календар і кантакты: перанос календара}
+	За перанос кантактаў мне ўсё яшчэ сорамна. Для яго я карыстаўся праграмай iCal Import/Export CalDAV [10]. Яно дазваляе экспартаваць календар з учэпістых лапак Google Inc у файл, які ўжо можна нармальна імпартаваць у ownCloud.
+\end{frame}
+
+\begin{frame}{Календар і кантакты: Сінхранізацыя з Thunderbird}
+	Абсалютна штатна і проста робіцца плугінамі. Даволі неблага дакументаваная [12] уключна з сінхранізацыяй календара, які аўтаматычна генерыцца для кантактаў [13]. Адзіны недахоп: кантакты ўсе сінхранізуюцца ў адну групу. Але маім мэтам гэта адпавядае.
+\end{frame}
+
+\subsection{Спасылкі}
+\begin{frame}{Спасылкі}
+	Неблагі вебінтэрфейс, ёсць андроід кліент. Але: кліент пад Андроід не ўмее ствараць групы і рэдактаваць кантакты. Але даволі неблага працуе з існуючым і ўмее дадаваць новыя спасылкі, у тым ліку ў існуючыя групы. Ужо можна карыстацца, але пытанні па акасці ёсць.
+\end{frame}
+
+\subsection{RSS}
+\begin{frame}{RSS}
+	Страшнаваты, але даволі функцыянальны вебінтэрфейс. Якім я, пашчасцю не карыстаюся (апроч стварэння груп). А вось Андроід-кліент [14] вельмі зручны, функцыянальны і прыгожы. 
+	\begin{center}
+		\includegraphics[height=0.4\textheight,keepaspectratio]{RSS-1}{ }\includegraphics[height=0.4\textheight,keepaspectratio]{RSS-2}
+	\end{center}
+\end{frame}
+
+\subsection{Нечаканы бонус}
+\begin{frame}{Нечаканы бонус}
+	Нечакана, апынулася што убудаваны тэкставы рэдактар — даволі зручны і функцыянальны. З улікам выкарыстання яго і тэкставых рэдактараў на дэсктопе і мабільных прыладах ад увахода атырмліваеш зручную і функцыянальныю сістэму нататак і нататнікаў у plain text з іерархіяй як на ўзроўні дакументаў, так і на ўзроўні файлавай сістэмы. Можна выкрыстоўваць і рэдактар дакументаў ODF, але ён даволі мінімалістычны. 
+\end{frame}
+
+\section{Што не атрымалася}
+\subsection{Кастылі і рагаціны}
+\begin{frame}{Кастылі і рагаціны}
+	Часам RSS пад час абнаўлення завяршаецца аварыйна. У выніку астаецца файл працэса, які прызначаны для таго, каб пазбегнуць паралельнага запуска некалькіх працэс вычыткі крыніц. У выніку абнаўленне спыняецца пакуль гэта не выправіць карыстальнік. У маім выпадку я дадаў скрыпт, каб правяраць гэты файл і калі ён існуе больш як гадзіну, то выдаляць яго безлістасна.
+\end{frame}
+
+\subsection{Адсутнасць і спустошанасць}
+\begin{frame}{Адсутнасць і спустошанасць}
+	сутыкнуўся з патрэбай кантраляваць медычныя паказнікі і прыём лекаў. нажаль, усё што я нарыў пад андроід мае шэраг недахопаў:
+	\begin{itemize}
+		\item страшныя альбо не працуюць (што здымае іншыя заўвагі)
+		\item часткова рэалізуюць патрэбны мне функцыянал (альбо часткова яго рэалізуюць так, што лепш бы яго не было)
+		\item захоўваць усё выключна ў самае правільнае прапрыетарнае воблака™
+	\end{itemize}
+\end{frame}
+
 \frame{\questionslide}
 
 \begin{frame}[allowframebreaks]{Спіс літаратуры і спасылкі}
@@ -134,6 +199,8 @@
 	\bibitem{}
 		{\sc \href{https://play.google.com/store/apps/details?id=tk.drlue.icalimportexport}{iCal Import/Export CalDAV}};
 	\bibitem{}
+		{\sc \href{https://play.google.com/store/apps/details?id=at.bitfire.davdroid}{DAVdroid – CalDAV/CardDAV Sync}};
+	\bibitem{}
 		{\sc \href{http://flailingmonkey.com/moving-contacts-calendar-google/}{Moving your Contacts and Calendar Away from Google}};
 	\bibitem{}
 		{\sc \href{http://blog.mehl.mx/2014/birthday-calendar-with-owncloud-via-caldav/}{Birthday Calendar with ownCloud via CalDAV}};
@@ -141,22 +208,6 @@
 		{\sc \href{https://play.google.com/store/apps/details?id=de.luhmer.owncloudnewsreader}{ownCloud News Reader}};
 	\bibitem{}
 		{\sc \href{https://play.google.com/store/apps/details?id=cz.nethar.owncloudbookmarks}{ownCloud Bookmarks}}.
-	\end{thebibliography}
-\end{frame}
-
-\begin{frame}{Ужытыя малюнкі}
-	\begin{thebibliography}{10}
-	\beamertemplatetextbibitems
-	\bibitem{}
-		{\sc \href{http://amai-biscuit.deviantart.com/art/FreeBSD-Badge-345132138}{FreeBSD Badge}} by {\sc \href{http://amai-biscuit.deviantart.com/}{amai-biscuit}};
-	\bibitem{}
-		{\sc \href{https://www.flickr.com/photos/nmcmanus/338391435}{Easy Button}} by {\sc \href{https://www.flickr.com/photos/nmcmanus/}{Civilian Scrabble}};
-	\bibitem{}
-		{\sc \href{https://www.flickr.com/photos/martinaphotography/6428406857}{66/365 Another Creepy One}} by {\sc \href{https://www.flickr.com/photos/martinaphotography/}{martinak15}};
-	\bibitem{F-16}
-		{\sc \href{https://commons.wikimedia.org/wiki/File:F-15\_takeoff.jpg}{F-15\_takeoff}} by {\sc USAF};
-	\bibitem{}
-		{\sc \href{https://www.flickr.com/photos/toasty/914441359}{Bang!}} by {\sc \href{https://www.flickr.com/photos/toasty/}{Kenneth Lu}}.
 	\end{thebibliography}
 \end{frame}
 
