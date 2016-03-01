@@ -1,0 +1,224 @@
+\documentclass[ignorenonframetext,hyperref={pdftex,unicode}]{beamer}
+
+\input{common}
+
+\title{Свой уласны Dropbox, з календаром, кантактамі і RSS}
+\author[Андрэй Захарэвіч]{Андрэй Захарэвіч\\ andrej\_zacharevic@epam.com}
+
+
+\begin{document}
+
+\frame{\titlepage} 
+
+
+\section{Мэты і задачы} 
+
+\begin{frame}{Што мы хацелі атрымаць} 
+	Для пачатку хацелася б атрымаць незалежны ад пастаўшчыка інструмент для штодзённых воблачных задач, якія звычайна мы давяраем карпарацыям кшталту Dropbox Inc, Google Inc і іншым. \pauseАсноўныя задачы, якія я б хацеў пакрыць:
+	\begin{itemize}
+		\item Воблачнае файлавае сховішча/файлаабменнік
+		\item Кантакты і календар
+		\item RSS
+		\item Спасылкі
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Файлаабменнік}
+	\begin{itemize}
+		\item Звычайныя магчымасці па абнаўленню файлаў з адной крыніцы на ўсе месцы, дзе ляжыць яго копія
+		\item Магчымасць стварыць агульны набор рэсурсаў для некалькіх карытальнікаў
+		\item Магчымасць падзяліцца спасылкай на нейкі файл з кім заўгодна (з нейкім механізмам абмежавання доступа)
+		\item Кліент пад Linux для сінхранізацыі ўсяго акаўнта ці асобных яго папак. Пажадана, каб дазваляў дадаваць некалькі акаўнтаў
+		\item Кліент пад Android з магчымасцю выбарачнай сінхранізацыі да ўзроўню асобнага файла
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Кантакты і календар}
+	\begin{itemize}
+		\item Цэнтралізаванае сховішча для календара і кантактаў з магчымасцю сінхранізацыі на прылады Android. У ідэале каб сінханізацыя адбывалася гэтак жа, як са звычайнымі правайдэрамі, то бок как не абмяжоўваць спіс праграм, якія потым з гэтымі кантактамі ці календарнымі запісамі змогуць працаваць
+		\item Зручны (хаця б мінімальна) інтэрфейс для кампьютэра з магчымасцю аб’ядноўваць кантакты ў групы
+		\item Групы кантактаў павінны быць бачныя і даступныя для любых аперацый як з кампа, так і з тэлефона
+		\item Магчымасць імпарту кантактаў і календара ў Thunderbird
+		\item Магчымасць экспарту у файл і пераносу на іншы сервер
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{RSS}
+	\begin{itemize}
+		\item Магчымасць чытаць як з кампьютэра, так і з Android-прылад
+		\item Магчымасць дадаваць стужкі з кампьютэра і Андроід-прылад
+		\item Магчымасць сінхранізаваць стан (прачытаны, пазначаны як цікавы) для розных працоўных месцаў
+		\item У ідэале, магчымасць атрымаць доступ праз вэб-інтэрфейс
+		\item Магчымасць экспарту у файл і пераносу на іншы сервер
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Спасылкі}
+	\begin{itemize}
+		\item Магчымасць чытаць як з кампьютэра, так і з Android-прылад
+		\item Магчымасць дадаваць з кампьютэра і Андроід-прылад
+		\item Групіроўка па групах ці тэгах, даступная для ўсіх кліентаў
+		\item Магчымасць экспарту у файл і пераносу на іншы сервер
+	\end{itemize}
+\end{frame}
+
+\section{Усталёўка і настройкі}
+\begin{frame}{Усталёўка: пачатак}
+	Магчымыя варыянты устаноўкі неблага апісаныя ў афіцыйным кіраўніцтве [1]. Па-сутнасці ёсць тры асноўных варыянта:
+	\begin{itemize}
+		\item Узяць зыходнікі і самастойна іх ўжыць на сваім серверы
+		\item Узяць пакет пад ваш дыстрыбутыў і паставіць самастойна
+		\item Дадаць рэпазітар для вашага дыстрыбутава са сборачнай сістэмы ў вашую сістэму
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Усталёўка: базавая канфігурацыя}
+	Пасля ўсталёўкі трэба будзе выканаць канфігурацыю, зайшоўшы http://localhost/owncloud [1]
+	\begin{itemize}
+		\item Пароль і імя карыстальніка для адміністратара
+		\item Адрас катагола з дадзенымі
+		\item Настройка базы дадзеных [4]
+		\item *Давераныя дамены
+		\item *Правы доступа на папкі
+		\item *Загрузка вялікіх файлаў [5]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Усталёўка: працяг настройкі канфігурацыі}
+	Неблага выканаць яшчэ дададковыя крокі для наладкі бяспекі для воблака. Вельмі раю скрарыстацца парадамі з адпаведнага раздзела кіраўніцтва [3]. 
+
+	Хаця, варта прызнаць, не ўсе парады аднолькава карысныя ва ўсіх умовах. Спроба настроіць кэш (пра што нават нагадвае старонка адміністравання) можа прывесці да часовай недаступнасці воблака ці заўважных праблем з хуткасцю працы. А вось абмежаванне логаў часам можа заўважна памяньшаць затрымку паміж запытам і адказам.
+\end{frame}
+
+\begin{frame}{Бясплатная тэставая пляцоўка}
+	Пазнаёміцца з працай і настройкамі можна на дэма-сайце \url{https://demo.owncloud.org}. Карыстальнік і пароль test. 
+
+	\begin{center}
+ 		\includegraphics[height=0.5\textheight,keepaspectratio]{demo}
+	\end{center}
+	
+	Выдатная пляцоўка каб без дадатковых выдаткаў паглядзець на базавы функцыянал і асноўныя плугіны. Дарэчы, такім чынам я адпрацоўваў імпарт кантактаў.Хаця, нажаль, набор плагінаў там даволі моцна абмежаваны.
+\end{frame}
+
+\begin{frame}{Кіраванне плугінамі}
+	Кіраваць наборам актыўных плугінаў можна праз пункт Apps верхняга меню.
+
+	\begin{center}
+ 		\includegraphics[height=0.4\textheight,keepaspectratio]{apps}
+	\end{center}
+\end{frame}
+
+\section{Што атрымалася}
+\subsection{Файлы}
+\begin{frame}{Файлы}
+	Самае простае: ёсць вебінтэрфейс, ёсць дэсктопныя кліенты пад розныя сістэмы [7], ёсць пад Андроід [8]. 
+
+	Прабачце, браты-BSDшнікі, але для вас пакуль няма. Але ёсць спецыфікацыі і зыходнікі. Нехта хоча пашырыць спіс?
+	
+	\begin{center}
+ 		\includegraphics[height=0.6\textheight,keepaspectratio]{d_client}
+	\end{center}
+\end{frame}
+
+\subsection{Календар і кантакты}
+\begin{frame}{Календар і кантакты: сінхранізацыя на Андроід}
+	З дапамогай DAVdroid – CalDAV/CardDAV Sync [11] вы лёгка настрайваеце двухбаковую сінхранізацыю кантактаў і календара паміж прыладай і воблакама. Ужо можна карыстацца, але без экспарта гэта нічога не дае апроч ганарлівага ўсведамлення магчымасцяў.
+\end{frame}
+
+\begin{frame}{Календар і кантакты: перанос кантактаў}
+	Для пераноса кантактаў я экспорціў іх ў фармат vCard. Гэта дазваляе захаваць усякую там кірыліцу, але пахерыла ўсе фотаздымкі.
+
+	{\bfЗАЎВАГА!} Не выкарыстоўвайце у назвах груп нічога апроч літар. У маім выпадку сінхранізацыя групы "Сям'я" давала непрадказальныя вынікі.
+\end{frame}
+
+\begin{frame}{Календар і кантакты: перанос календара}
+	За перанос кантактаў мне ўсё яшчэ сорамна. Для яго я карыстаўся праграмай iCal Import/Export CalDAV [10]. Яно дазваляе экспартаваць календар з учэпістых лапак Google Inc у файл, які ўжо можна нармальна імпартаваць у ownCloud.
+\end{frame}
+
+\begin{frame}{Календар і кантакты: Сінхранізацыя з Thunderbird}
+	Абсалютна штатна і проста робіцца плугінамі. Даволі неблага дакументаваная [12] уключна з сінхранізацыяй календара, які аўтаматычна генерыцца для кантактаў [13]. Адзіны недахоп: кантакты ўсе сінхранізуюцца ў адну групу. Але маім мэтам гэта адпавядае.
+\end{frame}
+
+\subsection{Спасылкі}
+\begin{frame}{Спасылкі}
+	Неблагі вебінтэрфейс, ёсць андроід кліент. Але: кліент пад Андроід не ўмее ствараць групы і рэдактаваць кантакты. Але даволі неблага працуе з існуючым і ўмее дадаваць новыя спасылкі, у тым ліку ў існуючыя групы. Ужо можна карыстацца, але пытанні па акасці ёсць.
+\end{frame}
+
+\subsection{RSS}
+\begin{frame}{RSS}
+	Страшнаваты, але даволі функцыянальны вебінтэрфейс. Якім я, пашчасцю не карыстаюся (апроч стварэння груп). А вось Андроід-кліент [14] вельмі зручны, функцыянальны і прыгожы. 
+	\begin{center}
+		\includegraphics[height=0.6\textheight,keepaspectratio]{RSS-1}{ }\includegraphics[height=0.6\textheight,keepaspectratio]{RSS-2}
+	\end{center}
+\end{frame}
+
+\subsection{Нечаканы бонус}
+\begin{frame}{Нечаканы бонус}
+	Нечакана, апынулася што убудаваны тэкставы рэдактар — даволі зручны і функцыянальны. З улікам выкарыстання яго і тэкставых рэдактараў на дэсктопе і мабільных прыладах ад увахода атырмліваеш зручную і функцыянальныю сістэму нататак і нататнікаў у plain text з іерархіяй як на ўзроўні дакументаў, так і на ўзроўні файлавай сістэмы. Можна выкрыстоўваць і рэдактар дакументаў ODF, але ён даволі мінімалістычны. 
+\end{frame}
+
+\section{Што не атрымалася}
+\subsection{Кастылі і рагаціны}
+\begin{frame}{Кастылі і рагаціны}
+	Часам RSS пад час абнаўлення завяршаецца аварыйна. У выніку астаецца файл працэса, які прызначаны для таго, каб пазбегнуць паралельнага запуска некалькіх працэс вычыткі крыніц. У выніку абнаўленне спыняецца пакуль гэта не выправіць карыстальнік. У маім выпадку я дадаў скрыпт, каб правяраць гэты файл і калі ён існуе больш як гадзіну, то выдаляць яго безлістасна.
+\end{frame}
+
+\subsection{Адсутнасць і спустошанасць}
+\begin{frame}{Адсутнасць і спустошанасць}
+	Cутыкнуўся з патрэбай кантраляваць медычныя паказнікі і прыём лекаў. нажаль, усё што я нарыў пад андроід мае шэраг недахопаў:
+	\begin{itemize}
+		\item страшныя альбо не працуюць (што здымае іншыя заўвагі)
+		\item часткова рэалізуюць патрэбны мне функцыянал (альбо часткова яго рэалізуюць так, што лепш бы яго не было)
+		\item захоўваюць усё выключна ў самае правільнае прапрыетарнае воблака™
+	\end{itemize}
+\end{frame}
+
+\section{Анонсы і абяцанкі}
+\begin{frame}{Планы на LVEE 2016}
+	Гэтым дакладам я б хацеў пачаць серыю дакладаў пра маю любімую воблачную цацку:
+	\begin{itemize}
+		\item Федэрацыя, альбо як пабудаваць з некалькіх уласных аблокаў адно метавоблака
+		\item Майстарклас с паказам як паставіць і настроіць сваё воблака
+		\item і іншае
+	\end{itemize}
+\end{frame}
+
+\frame{\questionslide}
+
+\begin{frame}[allowframebreaks]{Спіс літаратуры і спасылкі}
+	\begin{thebibliography}{10}
+	\beamertemplatetextbibitems
+	\bibitem{}
+		{\sc \href{https://doc.owncloud.org/server/8.2/admin\_manual/installation/index.html}{ownCloud Server Administration Manual: Installation}};
+	\bibitem{}
+		{\sc \href{https://doc.owncloud.org/server/8.2/admin\_manual/configuration\_server/performance\_tuning.html}{ownCloud Server Administration Manual: Server Tuning \& Performance Tips}};
+	\bibitem{}
+		{\sc \href{https://doc.owncloud.org/server/8.2/admin\_manual/configuration\_server/harden\_server.html?highlight=security}{ownCloud Server Administration Manual: Hardening and Security Guidance}};
+	\bibitem{}
+		{\sc \href{https://doc.owncloud.org/server/8.2/admin\_manual/configuration\_database/linux\_database\_configuration.html}{ownCloud Server Administration Manual: Database Configuration}};
+	\bibitem{}
+		{\sc \href{https://www.ssllabs.com/ssltest/}{Qualys SSL Labs SSL Server Test}};
+	\bibitem{}
+		{\sc \href{https://doc.owncloud.org/server/8.2/admin\_manual/configuration\_files/big\_file\_upload\_configuration.html}{ownCloud Server Administration Manual: Uploading big files}};
+	\bibitem{}
+		{\sc \href{https://owncloud.com/products/desktop-clients/}{ownCloud Desktop Clients}};
+	\bibitem{}
+		{\sc \href{https://play.google.com/store/apps/details?id=com.owncloud.android}{ownCloud client for Android}};
+	\bibitem{}
+		{\sc \href{http://manandkeyboard.tk/2015/02/26/google-to-owncloud-contacts-and-calendar/}{Man and Keyboard: Google to Owncloud, Contacts and Calendar}};
+	\bibitem{}
+		{\sc \href{https://play.google.com/store/apps/details?id=tk.drlue.icalimportexport}{iCal Import/Export CalDAV}};
+	\bibitem{}
+		{\sc \href{https://play.google.com/store/apps/details?id=at.bitfire.davdroid}{DAVdroid – CalDAV/CardDAV Sync}};
+	\bibitem{}
+		{\sc \href{http://flailingmonkey.com/moving-contacts-calendar-google/}{Moving your Contacts and Calendar Away from Google}};
+	\bibitem{}
+		{\sc \href{http://blog.mehl.mx/2014/birthday-calendar-with-owncloud-via-caldav/}{Birthday Calendar with ownCloud via CalDAV}};
+	\bibitem{}
+		{\sc \href{https://play.google.com/store/apps/details?id=de.luhmer.owncloudnewsreader}{ownCloud News Reader}};
+	\bibitem{}
+		{\sc \href{https://play.google.com/store/apps/details?id=cz.nethar.owncloudbookmarks}{ownCloud Bookmarks}}.
+	\end{thebibliography}
+\end{frame}
+
+\end{document}
