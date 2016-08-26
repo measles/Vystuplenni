@@ -9,6 +9,7 @@ help:
 pdf:
 	@pdflatex *.tex
 	@pdflatex *.tex
+	@pdflatex *.tex
 	+make clean
 
 clean: 
