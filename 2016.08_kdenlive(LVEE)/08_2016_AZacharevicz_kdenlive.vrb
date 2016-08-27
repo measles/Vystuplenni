@@ -1,0 +1,12 @@
+\frametitle{Чым карысталіся}
+	Але гэта галоўная ідэя і па факце слайд можна дапаўняць шэрагам іншых аб'ектаў і відэафайлаў, якія не з'яўляюцца абавязковымі, але паляпшаюць уражанне ад відэа.
+	\begin{itemize}
+		\item kdenlive[3]
+		\item скрыпт для захопу скрынкаста з дапамогай ffmpeg[4]
+		\item pdftoppm[5] з пакету Poppler[6] (poppler-utils у Debian)
+	\end{itemize}
+
+	Прыклад ужывання pdftoppm:
+		\begin{lstlisting}[language=bash]
+pdftoppm -jpeg slides.pdf prefix
+		\end{lstlisting}

@@ -1,0 +1,39 @@
+\usetheme{Epam}
+
+% Каб дадаваць зыходны код
+\usepackage{listings}
+% Дазволіць устаўляць LaTeX код паміж значкамі
+\lstset{escapeinside=||}
+
+\usepackage{indentfirst,amsfonts} % падтрымка кірылічных тыпаграфічных стандартаў
+
+\usepackage[english,russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% for hyperlinks
+\usepackage{hyperref}
+% for strike-out text
+\usepackage[normalem]{ulem}
+
+\ifpdf
+        \usepackage{cmap} % пошук па PDF
+        \pdfcompresslevel=9 % узровень кампрэсіі PDF
+\else
+        \usepackage{graphicx}
+\fi
+
+% Замяніць дату знакам капірайту і годам
+\date{\copyright\the\year}
+
+% Слайд "Пытанні"
+\newcommand{\questionslide} {
+	\vfill
+	\begin{beamercolorbox}[rounded=true,shadow=true,sep=8pt,center]{title}
+		\huge\bf Пытанні? \par
+		\vskip0.25em
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[sep=8pt,center]{foot1} 
+		\insertauthor\par
+	\end{beamercolorbox}
+}
