@@ -2,6 +2,11 @@
 
 Рэпазіторый змяшчае зыходнікі для слайдаў з прэзентацыямі да розных дакладаў і выступленняў.
 
+## Досвед апацоўкі відэа з дапамогай kdenlive
+Слайды да дэманстрацыі магчымасцяў па апрацоўцы дакладаў ці лекцый на LVEE  2016.
+ * Зыходнікі: [2016.08_kdenlive(LVEE)] (https://github.com/measles/Vystuplenni/tree/master/2016.08_kdenlive\(LVEE\))
+ * Слайды на [Slideshare](http://www.slideshare.net/andrej_z/kdenlive-65421925)
+
 ## Свой уласны Dropbox, з календаром, кантактамі і RSS
 Расказ пра уласны досвед разгортвання і выкарыстання ownCloud на LVEE Winter 2016. Па-сутнасці першы даклад з серыі.
  * Зыходнікі: [2016.02.13_LVEE_2016_Winter] (https://github.com/measles/Vystuplenni/tree/master/2016.02.13_LVEE_2016_Winter)
