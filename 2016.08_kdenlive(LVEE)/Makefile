@@ -13,4 +13,4 @@ pdf:
 	+make clean
 
 clean: 
-	@rm *.log *.out *.aux *.nav *.snm *.toc
+	@rm *.log *.out *.aux *.nav *.snm *.toc *.vrb
