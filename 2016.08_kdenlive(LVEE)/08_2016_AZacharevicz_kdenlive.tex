@@ -25,7 +25,7 @@
 \section{Што хацелі атрымаць} 
 
 \begin{frame}{Куды мы мусім рухацца} 
-	Слайды мусяць фіксавацца асобна і займаць большую частку плошчы кадра. Ідэю я сустракаў і раней, але канчаткова зразумеў, крыху пазнаёміўшыся з матэрыяламі пра Seminar Assembler[1][2] Стаса Фаміна
+	Слайды мусяць фіксавацца асобна і займаць большую частку плошчы кадра. Ідэю я сустракаў і раней, але канчаткова зразумеў, крыху пазнаёміўшыся з матэрыяламі пра Seminar Assembler\cite{SeminarAssembler}\cite{SAsources} Стаса Фаміна
 	\begin{center}
  		\includegraphics[height=0.5\textheight,keepaspectratio]{2}		
 	\end{center}
@@ -44,9 +44,9 @@
 	\frametitle{Чым карысталіся} 
 	Для таго каб здзейсніць постапрацоўку матэрыялаў дакладу я карыстаўся наступнымі пакетамі:
 	\begin{itemize}
-		\item kdenlive[3]
-		\item скрыпт для захопу скрынкаста з дапамогай ffmpeg[4]
-		\item pdftoppm[5] з пакету Poppler[6] (poppler-utils у Debian)
+		\item kdenlive\cite{kdenlive}
+		\item скрыпт для захопу скрынкаста з дапамогай ffmpeg\cite{screencast}
+		\item pdftoppm\cite{pdftoppm} з пакету Poppler\cite{poppler} (poppler-utils у Debian)
 	\end{itemize}
 	
 	Прыклад ужывання pdftoppm:
@@ -60,17 +60,17 @@ pdftoppm -jpeg slides.pdf prefix
 \begin{frame}{Спіс літаратуры і спасылкі}
 	\begin{thebibliography}{10}
 	\beamertemplatetextbibitems
-	\bibitem{}
+	\bibitem{SeminarAssembler}
 		{\sc \href{http://wiki.4intra.net/SeminarAssembler}{SeminarAssembler}};
-	\bibitem{}
+	\bibitem{SAsources}
 		{\sc \href{https://abf.io/belonesox/seminar-assembler/}{Зыходнікі SeminarAssembler}};
-	\bibitem{}
+	\bibitem{kdenlive}
 		{\sc \href{https://kdenlive.org/}{Kdenlive}};
-	\bibitem{}
+	\bibitem{screencast}
 		{\sc \href{https://github.com/measles/mlug\_screencast\_sound}{Скрыпт для запісу скрынкастаў}};
-	\bibitem{}
+	\bibitem{pdftoppm}
 		{\sc \href{http://linux.die.net/man/1/pdftoppm}{pdftoppm}};
-	\bibitem{}
+	\bibitem{poppler}
 		{\sc \href{https://poppler.freedesktop.org/}{Афіцыйная старонка Poppler}};
 	\end{thebibliography}
 \end{frame}
