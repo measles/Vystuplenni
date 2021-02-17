@@ -4,12 +4,12 @@
 
 ## Досвед апацоўкі відэа з дапамогай kdenlive
 Слайды да дэманстрацыі магчымасцяў па апрацоўцы дакладаў ці лекцый на LVEE  2016.
- * Зыходнікі: [2016.08_kdenlive(LVEE)] (https://github.com/measles/Vystuplenni/tree/master/2016.08_kdenlive\(LVEE\))
+ * Зыходнікі: [2016.08_kdenlive(LVEE)](https://github.com/measles/Vystuplenni/tree/master/2016.08_kdenlive%28LVEE%29)
  * Слайды на [Slideshare](http://www.slideshare.net/andrej_z/kdenlive-65421925)
 
 ## Свой уласны Dropbox, з календаром, кантактамі і RSS
 Расказ пра уласны досвед разгортвання і выкарыстання ownCloud на LVEE Winter 2016. Па-сутнасці першы даклад з серыі.
- * Зыходнікі: [2016.02.13_LVEE_2016_Winter] (https://github.com/measles/Vystuplenni/tree/master/2016.02.13_LVEE_2016_Winter)
+ * Зыходнікі: [2016.02.13_LVEE_2016_Winter](https://github.com/measles/Vystuplenni/tree/master/2016.02.13_LVEE_2016_Winter)
  * Слайды на [Slideshare](http://www.slideshare.net/andrej_z/dropbox-rss)
 
 ## Абмеркаванне вынікаў выкарыстання Hackpad на лінуксоўцы ##
